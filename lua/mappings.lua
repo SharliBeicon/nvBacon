@@ -1,7 +1,7 @@
 require "nvchad.mappings"
 
 -- add yours here
-
+vim.wo.number = true
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
