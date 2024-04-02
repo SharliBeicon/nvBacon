@@ -23,7 +23,8 @@ return {
         "typescript-language-server",
         "astro-language-server",
         "csharp-language-server", "csharpier",
-        "tailwindcss-language-server"
+        "tailwindcss-language-server",
+        "rust-analyzer"
   		},
   	},
   },
