@@ -24,7 +24,8 @@ return {
         "astro-language-server",
         "csharp-language-server", "csharpier",
         "tailwindcss-language-server",
-        "rust-analyzer"
+        "rust-analyzer",
+        "codelldb", "go-debug-adapter", "js-debug-adapter",
   		},
   	},
   },
@@ -36,7 +37,8 @@ return {
         "html", "css", "c_sharp",
         "cpp", "gitignore", "go",
         "json", "rust", "sql",
-        "tsx", "typescript", "yaml"
+        "tsx", "typescript", "yaml",
+        "java"
       },
   	},
   },
