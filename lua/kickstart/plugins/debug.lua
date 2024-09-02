@@ -95,27 +95,6 @@ return {
       },
     }
 
-    -- Rust specific config
-    dap.adapters.codelldb = {
-      type = 'server',
-      port = '${port}',
-      executable = {
-        command = vim.fn.expand '~/.local/share/nvim/mason/bin/codelldb',
-        args = { '--port', '${port}' },
-      },
-    }
-
-    dap.configurations.rust = {
-      {
-        name = 'Debug an Executable',
-        type = 'codelldb',
-        request = 'launch',
-        program = function()
-          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
-        end,
-        cwd = '${workspaceFolder}',
-        stopOnEntry = false,
-      },
-    }
+    require('nvim-dap-projects').search_project_config()
   end,
 }
