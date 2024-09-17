@@ -25,12 +25,12 @@ return {
         hide_during_completion = true,
         debounce = 75,
         keymap = {
-          accept = '<Tab>',
+          accept = 'çç',
           accept_word = false,
           accept_line = false,
           next = 'ññ',
-          prev = '<M-[>',
-          dismiss = '<M-x>',
+          prev = false,
+          dismiss = false,
         },
       },
       filetypes = {
