@@ -1,5 +1,3 @@
 return {
-  {
-    'ldelossa/nvim-dap-projects',
-  },
+  'ldelossa/nvim-dap-projects',
 }
