@@ -618,7 +618,7 @@ require('lazy').setup({
         -- clangd = {},
         jsonls = {},
         html = {},
-        tsserver = {},
+        ts_ls = {},
         rust_analyzer = {},
         tailwindcss = {},
         clangd = {},
