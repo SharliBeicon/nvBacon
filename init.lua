@@ -857,7 +857,7 @@ require('lazy').setup({
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.opt.termguicolors = true
       vim.opt.background = 'dark'
-      vim.cmd.colorscheme 'kanagawa-dragon'
+      vim.cmd.colorscheme 'catppuccin-macchiato'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
@@ -976,7 +976,7 @@ require('lazy').setup({
     },
   },
 })
-
+require('dapui').setup()
 require('nvim-dap-projects').search_project_config()
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

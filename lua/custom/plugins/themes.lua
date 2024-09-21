@@ -8,4 +8,11 @@ return {
   {
     'rebelot/kanagawa.nvim',
   },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    opts = {
+      transparent_background = true,
+    },
+  },
 }
