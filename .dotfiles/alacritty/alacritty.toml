@@ -22,8 +22,7 @@ family = "Iosevka Nerd Font"
 [window]
 startup_mode = "Maximized"
 dynamic_padding = true
-opacity = 0.83
-padding.x = 1
-padding.y = 1
-blur = true
+opacity = 1
+padding.x = 5
+padding.y = 5
 decorations = "Buttonless"
