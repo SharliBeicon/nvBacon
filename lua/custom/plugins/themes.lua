@@ -32,7 +32,7 @@ return {
         },
 
         styles = {
-          bold = true,
+          bold = false,
           italic = false,
           transparency = false,
         },
@@ -68,8 +68,6 @@ return {
           h6 = 'foam',
         },
       }
-
-      vim.cmd 'colorscheme rose-pine'
     end,
   },
 }
