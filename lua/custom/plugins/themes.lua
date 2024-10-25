@@ -1,5 +1,9 @@
 return {
   {
+    'bluz71/vim-moonfly-colors',
+    name = 'moonfly',
+  },
+  {
     'mcchrish/zenbones.nvim',
     dependencies = {
       'rktjmp/lush.nvim',

@@ -170,8 +170,9 @@ vim.opt.scrolloff = 10
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Set tabstop and shiftwidth to 2
-vim.o.tabstop = 4
+vim.o.tabstop = 8
 vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
 vim.o.expandtab = true
 
 -- Diagnostic keymaps
@@ -200,6 +201,12 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Movement with CTRL+<hjkl> while on insert mode
+vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', { noremap = true, silent = true })
+--
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -667,6 +674,8 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua',
         'clang-format', -- Used to format Lua code
+        'prettierd',
+        'buf',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -719,8 +728,19 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        c = { 'clang-format' },
         cpp = { 'clang-format' },
         cxx_header = { 'clang-format' },
+        javascript = { 'prettierd' },
+        typescript = { 'prettierd' },
+        json = { 'prettierd' },
+        javascriptreact = { 'prettierd' },
+        css = { 'prettierd' },
+        markdown = { 'prettierd' },
+        yaml = { 'prettierd' },
+        rs = { 'rust_analyzer' },
+        odin = { 'ols' },
+        proto = { 'buf' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -980,5 +1000,6 @@ require('lazy').setup({
 })
 require('dapui').setup()
 require('nvim-dap-projects').search_project_config()
+vim.opt.guicursor = 'i:block' -- keep cursor as block
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
