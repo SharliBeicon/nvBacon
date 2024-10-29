@@ -625,7 +625,19 @@ require('lazy').setup({
         jsonls = {},
         html = {},
         ts_ls = {},
-        rust_analyzer = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              procMacro = {
+                ignored = {
+                  leptos_macro = {
+                    'server',
+                  },
+                },
+              },
+            },
+          },
+        },
         tailwindcss = {},
         clangd = {},
         pylsp = {},
