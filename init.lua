@@ -629,11 +629,10 @@ require('lazy').setup({
           settings = {
             ['rust-analyzer'] = {
               procMacro = {
-                ignored = {
-                  leptos_macro = {
-                    'server',
-                  },
-                },
+                enable = true,
+              },
+              cargo = {
+                features = 'all',
               },
             },
           },
@@ -747,7 +746,6 @@ require('lazy').setup({
         typescript = { 'prettierd' },
         json = { 'prettierd' },
         javascriptreact = { 'prettierd' },
-        css = { 'prettierd' },
         markdown = { 'prettierd' },
         yaml = { 'prettierd' },
         rs = { 'rust_analyzer' },
