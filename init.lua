@@ -714,6 +714,7 @@ require('lazy').setup({
         sqlls = {},
         zls = {},
         ols = {},
+        bashls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -824,6 +825,7 @@ require('lazy').setup({
         rs = { 'rust_analyzer' },
         odin = { 'ols' },
         proto = { 'buf' },
+        sh = { 'beautysh' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
